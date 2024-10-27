@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Event Tracker</h1>
+
+    <div class="event-container">
+        <!-- Click Event -->
+        <div class="event-box" onclick="clickEvent()">
+            <h2>Click Event</h2>
+            <p>Click Count: <span id="click-count">0</span></p>
+        </div>
+
+        <!-- Mouse Over Event -->
+        <div class="event-box" onmouseover="mouseOverEvent()">
+            <h2>Mouse Over Event</h2>
+            <p id="mouse-over-status">Hover over me!</p>
+        </div>
+
+        <!-- Keyboard Event -->
+        <div class="event-box">
+            <h2>Keyboard Event</h2>
+            <div class="input-box">
+                <input type="text" onkeydown="keyboardEvent()" placeholder="Press any key">
+                <p id="key-status">Press a key to see the event</p>
+            </div>
+        </div>
+
+        <!-- Form Submit Event -->
+        <div class="event-box">
+            <h2>Form Submit Event</h2>
+            <form onsubmit="submitEvent(event)">
+                <textarea placeholder="Type a message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="submit-status"></p>
+        </div>
+
+        <!-- Window Resize Event -->
+        <div class="event-box">
+            <h2>Window Resize Event</h2>
+            <div class="resize-box">
+                <p>Width: <span id="width"></span>px</p>
+                <p>Height: <span id="height"></span>px</p>
+            </div>
+        </div>
+
+        <!-- Media Event -->
+        <div class="event-box">
+            <h2>Media Event</h2>
+            <video class="media-video" id="video" width="100%" controls onplay="mediaPlay()" onpause="mediaPause()">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p id="media-status">Status: Not Playing</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
